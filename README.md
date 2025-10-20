@@ -9,13 +9,18 @@ This repository implements a **Retrieval-Augmented Generation (RAG) system** for
 
 This project is designed to run in a Python virtual environment (`venv`). Follow these steps to set it up:
 
-1. **Create a virtual environment**:
-
+1. Install `virtualenv` package
 ```bash
-python -m venv venv
+pip install virtualenv
 ```
 
-2. **Activate the virtual environment**:
+2. **Create a virtual environment**:
+
+```bash
+virtualenv venv
+```
+
+3. **Activate the virtual environment**:
 
 - On macOS/Linux:
 ```bash
@@ -26,7 +31,7 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
-3. **Install dependencies**:
+4. **Install dependencies**:
 
 ```bash
 pip install -r requirements.txt
