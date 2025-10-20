@@ -5,6 +5,53 @@ This repository implements a **Retrieval-Augmented Generation (RAG) system** for
 
 ---
 
+## Examples
+
+### Example 1:
+Input
+```bash
+python -m query_db "How does battling work in Root?"
+```
+
+Ouput
+```bash
+When battling, the attacker chooses a clearing where they have warriors and selects another faction with pieces in that clearing as the defender. The battle occurs in two steps:
+
+1. Roll Dice:
+- Roll two dice
+- Attacker deals hits equal to the higher roll
+- Defender deals hits equal to the lower roll
+- Each player can roll no more hits than their number of warriors in the clearing
+
+2. Remove Pieces:
+- Both players remove pieces simultaneously
+- The player taking hits chooses which pieces to remove
+- Warriors must be removed before buildings or tokens
+- Players must remove all their warriors in the clearing before removing other pieces
+
+Some effects can allow extra hits during battle.
+```
+
+### Example 2
+Input
+```bash
+python -m query_db "What are some effects that can cause extra hits during battle?"
+```
+
+Ouput
+```bash
+Here are some effects that can cause extra hits during battle:
+
+1. Defenseless Defender: If the defender has no warriors in the clearing of battle, the attacker deals an extra hit.
+
+2. Brutal Tactics Card: When attacking, the player may deal an extra hit, but the defender scores one point.
+
+3. Ambush Cards: The defender can play an ambush card matching the clearing's suit to deal two immediate hits, which are not limited by the number of warriors.
+
+These extra hits are not constrained by the number of warriors in the clearing and can be dealt by a single warrior.
+```
+
+---
 ## Setup
 
 This project is designed to run in a Python virtual environment (`venv`). Follow these steps to set it up:
@@ -67,6 +114,7 @@ This function will:
 - Match relevant rules in the **vector database**.
 - Query the currently configured **LangChain LLM** to reason over the retrieved chunks.
 - Generate a detailed answer to your question about the rules of *Root*.
+
 
 ---
 
