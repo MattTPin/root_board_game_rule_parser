@@ -3,6 +3,8 @@
 
 This repository implements a **Retrieval-Augmented Generation (RAG) system** for the board game *Root*. The system reads in the rules of the game from PDF documents and stores them in a **Chroma vector database**. You can then query the database, and in combination with a configurable **LangChain LLM**, receive answers to specific questions about the rules of the game!
 
+![RAG Diagram](https://github.com/user-attachments/assets/87391093-9bfb-4a89-a078-b2de3dae98d6 "RAG Diagram")
+
 ---
 
 ## Examples
